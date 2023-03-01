@@ -3,7 +3,7 @@ package PlaySongDemo;
 /**
  * This code will play any song assuming that file is in folder songfiles. 
  * 
- * Programmer Rick Mercer
+ * Programmer Bryan Johnson & Rick Mercer
  */
 import java.io.File;
 import java.net.URI;
@@ -26,11 +26,16 @@ public class PlayAnMP3 extends Application {
   private int songsPlayed = 0;
 
   @Override
-  public void start(Stage stage) throws Exception {
-    BorderPane pane = new BorderPane();
-    String path = "songfiles/Capture.mp3";
-    pane.setCenter( new Label(path));
-    playASong(path);
+
+
+public void start(Stage stage) throws Exception {
+	BorderPane pane = new BorderPane();
+  	// I, Bryan Johnson, changed the song to be played before pushing to GitHub
+  	String path = "songfiles/DanseMacabreViolinHook.mp3";
+  	playASong(path);
+  	// And swapped two lines
+  	pane.setCenter( new Label(path));
+
     // Put the pane in a sized Scene and show the GUI
     Scene scene = new Scene(pane, 255, 85); // 255 pixels wide, 85 pixels tall
     stage.setScene(scene);
